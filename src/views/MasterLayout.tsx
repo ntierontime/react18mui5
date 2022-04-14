@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography';
 
 import AppBar from '../components/layout/AppBar';
 import AppDrawer from '../components/layout/AppDrawer';
+import { RootState } from 'src/store/CombinedReducers';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeAppDrawer, openAppDrawer } from 'src/slices/appSlice';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -18,21 +21,24 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function MasterLayout() {
+  const app = useSelector((state: RootState) => state.app);
+  const dispatch = useDispatch();
+  
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    dispatch(openAppDrawer());
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    dispatch(closeAppDrawer());
   };
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar open={open} title={'abcdefg'} openDrawerHandler={handleDrawerOpen} />
-      <AppDrawer open={open} closeDrawerHandler={handleDrawerClose} appDrawerItems={[]} />
+      <AppBar open={app.drawerOpen} title={'abcdefg'} openDrawerHandler={handleDrawerOpen} />
+      <AppDrawer open={app.drawerOpen} closeDrawerHandler={handleDrawerClose} appDrawerItems={[]} />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <Typography paragraph>

@@ -20,6 +20,17 @@ npm install @reduxjs/toolkit
 npm install redux-logger
 npm i --save-dev @types/redux-logger
 
+Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+TS7016: Could not find a declaration file for module 'react-dom/client'. 'D:/Github/react18mui5/node_modules/react-dom/client.js' implicitly has an 'any' type.
+  If the 'react-dom' package actually exposes this module, consider sending a pull request to amend 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom'
+
+'D:/Github/react18mui5/node_modules/react-dom/client.js' implicitly has an 'any' type.
+  If the 'react-dom' package actually exposes this module, consider sending a pull request to amend 'https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom'
+
+upper is the reason why can't use 'react-dom/client'. no @typescript declaration file.
+
+  
 React Event Handlers with TypeScript
 
 

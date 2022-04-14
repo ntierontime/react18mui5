@@ -2,7 +2,6 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'reduxjs-toolkit-persist'
 import storage from 'reduxjs-toolkit-persist/lib/storage' // defaults to localStorage for web
 
-import logger from 'redux-logger'
 import { reducers } from './CombinedReducers'
 
 const persistConfig = {
@@ -12,7 +11,6 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, reducers)
 
-export type RootState = ReturnType<typeof reducers>
 const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware({
