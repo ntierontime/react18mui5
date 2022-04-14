@@ -14,6 +14,8 @@ npm install @mui/icons-material
 storybook
 npx sb init
 component strategy
+
+react-redux
 npm install @reduxjs/toolkit
 npm install redux-logger
 npm i --save-dev @types/redux-logger
