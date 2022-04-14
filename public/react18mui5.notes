@@ -1,0 +1,23 @@
+Updated node.js(16.14.2) and npm/npx(8.5.0) to latest
+npm uninstall -g create-react-app
+npm install -g create-react-app
+npx create-react-app my-app
+npx create-react-app my-app - template typescript
+react v18.0.0
+typescript v4.6.3
+material-ui v5.6.1 with emotion
+npm install @mui/material @emotion/react @emotion/styled
+material-ui v5.6.1 with styled-components
+npm install @mui/material @mui/styled-engine-sc styled-components
+material-ui v5.6.1 svg icons
+npm install @mui/icons-material
+storybook
+npx sb init
+component strategy
+npm install @reduxjs/toolkit
+npm install redux-logger
+npm i --save-dev @types/redux-logger
+
+React Event Handlers with TypeScript
+
+
